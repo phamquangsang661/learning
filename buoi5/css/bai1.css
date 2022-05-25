@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+}
+
+.container {
+    width: fit-content;
+    height: 100vh;
+    margin: 0px auto;
+}
+
+.container-item {
+    display: inline-block;
+    width: 300px;
+    height: 100vh;
+    vertical-align: top;
+    color: white;
+}
+
+.container-right {
+    text-align: left;
+}
+
+.container-left {
+    font-family: "Playfair Display", serif;
+}
+.text-about {
+    font-size: 80px;
+}
+.text-harness {
+    font-size: 20px;
+}
