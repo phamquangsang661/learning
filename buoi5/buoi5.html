@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: white;
+        }
+
+        div p a {
+            color: green;
+        }
+
+        .the-a {
+            color: red
+        }
+
+        .container {
+            border: 1px solid green;
+        }
+
+        .container-1 {
+            background-color: red;
+        }
+
+        .container-2 p {
+            background-color: blue;
+        }
+
+        .container-2 .text-white {
+            color: white;
+        }
+
+        .container-2 #test {
+            color: red
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .text-red {
+            color: red;
+        }
+
+        .inline-block-red {
+            display: inline-block;
+            color: red;
+        }
+
+        .p-30 {
+            padding: 30px
+        }
+
+        .container-item {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            background-color: black;
+        }
+
+        .text-css {
+            width: 50px;
+            height: 30px;
+            border: 1px solid black;
+            margin-bottom: 100px;
+            overflow: hidden
+        }
+
+        .to-clip {}
+
+        p.to-ellipsis {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .font-odibee {
+            font-family: 'Odibee Sans', cursive;
+            font-size: 30px;
+        }
+
+        .font-smooch {
+            font-family: 'Smooch', cursive;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Đây là thẻ P</p>
+    <p>Đây là thẻ P</p>
+    <div class="container container-1">
+        <p>Đây là thẻ P thứ nhất
+            <a>ádasd</a>
+        </p>
+        <p>đây là test </p>
+        <p>đây là test </p>
+    </div>
+    <p class="text-white">đây là chữ trắng </p>
+    <div class="container container-2">
+        <p>Đây là thẻ P thứ 2
+            <a class="the-a">ádasd</a>
+            <p>đây là test </p>
+            <p class="text-white">đây là chữ trắng</p>
+            <p id="test">Test</p>
+        </p>
+    </div>
+    <div class="inline-block-red p-30">Đây là thẻ inline block</div>
+    <div class="inline-block-red p-30">Đây là thẻ inline block</div>
+    <div class="container">
+        <div class="container-item"></div>
+        <div class="container-item"></div>
+        <div class="container-item"></div>
+        <div class="container-item"></div>
+        <div class="container-item">
+            <p class="container-item-heading"></p>
+        </div>
+        <div class="container-item"></div>
+    </div>
+    <!-- Text CSS -->
+    <div class="text-css">
+        <p class="to-clip">đâsdaddsdsadsadasd</p>
+    </div>
+    <p class="to-ellipsis">adsdasdấdasdaddadadsadsadasdadsadasdsdasdsd</p>
+    <p class="font-odibee">TEST</p>
+    <p class="font-smooch">Almost before we knew it, we had left the ground.
+    </p>
+</body>
+
+</html>
