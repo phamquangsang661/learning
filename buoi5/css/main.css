@@ -1,3 +1,72 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&family=Roboto&display=swap");
+
 p {
     color: black;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-top {
+    vertical-align: top;
+}
+.vertical-middle {
+    vertical-align: middle;
+}
+.fix-inline-block {
+    margin-left: -4px;
+}
+
+.h-full {
+    height: 100%;
+}
+.w-full {
+    width: 100%;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.font-open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+
+.font-roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+.font-playfair {
+    font-family: "Playfair Display", serif;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.font-bold {
+    font-weight: bold;
 }
