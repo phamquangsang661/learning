@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./buoi6.css">
+    <link rel="stylesheet" href="./../css/main.css">
+</head>
+<style type="text/css">
+    .list-square {
+        list-style-type: square;
+    }
+
+    .list-img {
+        list-style-image: url('./asset/image/icon-smile.png');
+        font-size: 10px;
+    }
+
+    .list-upper-roman {
+        list-style-type: upper-roman;
+    }
+
+    .absolute-center {
+        top: calc(50% - 15px);
+        left: calc(50% - 15px)
+    }
+
+    .absolute-center-x {
+        top: calc(50% - 15px);
+    }
+</style>
+
+<body class="text-black">
+    <ul class="list-square">
+        <li>Dòng 1</li>
+        <li>Dòng 2</li>
+        <li>Dòng 3</li>
+    </ul>
+    <ul class="list-img">
+        <li>Dòng 1</li>
+        <li>Dòng 2</li>
+        <li>Dòng 3</li>
+    </ul>
+    <ol class="list-upper-roman">
+        <li style="padding-left:10px">Dòng 1</li>
+        <li>Dòng 2</li>
+        <li>Dòng 3</li>
+    </ol>
+    <div class="bg-green h-full" style="padding-top:30px;display: none">
+        <div class="bg-red h-100px w-full relative">
+            <div class="bg-blue h-30px w-30px absolute absolute-center z-3"></div>
+            <div style="top:10px;left:50%" class="bg-green h-30px w-30px absolute z-2"></div>
+        </div>
+
+        <div class="text-white">
+
+            <div style="width:50%" class="bg-blue bg-red h-100px overflow-scroll">
+                dsadasdsdasdadsđâsd
+                sdasdasdads
+                đâsdaddsdsadsadasd
+                dsadasdsdasdadsđâsd
+                dsadasdsdasdadsđâsd
+                sdasdasdads
+            </div>
+        </div>
+        <div class="border-black relative" style="height:50%; background-color:white">
+            <div class="absolute absolute-center-x border-black" style="width:400px ">
+                <div class="h-30px w-30px bg-red float-left"></div>
+                <div class="h-30px w-30px bg-blue float-left"></div>
+                <div class="h-30px w-30px bg-red float-left"></div>
+                <div class="h-30px w-30px bg-blue float-right"></div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+</body>
+
+</html>
