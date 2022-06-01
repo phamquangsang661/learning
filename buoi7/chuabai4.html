@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/main.css">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .item {
+        padding: 5px 20px;
+        border: 1px solid black;
+        border-radius: 5px
+    }
+
+    .item:hover {
+        background-color: orange;
+        color: white
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .item-contact:hover .contact{
+        display: block;
+        color:black;
+        top:30px;
+        width:100%;
+        left:0px;
+    }
+
+    .contact-item{
+        text-align: center;
+        background-color:orange;
+        border:1px solid white
+    }
+    .contact-item:hover{
+        background-color:red;
+        color:black
+    }
+
+</style>
+
+<body>
+    <div class="mx-auto w-fit text-black">
+        <div class="inline-block item">Home</div>
+        <div class="inline-block item">About</div>
+        <div class="inline-block item item-contact relative">
+            Contact
+            <div class="contact absolute">
+                <div class="contact-item">A</div>
+                <div  class="contact-item">B</div>
+                <div  class="contact-item">C</div>
+            </div>
+        </div>
+        <div class="inline-block item">FAQ</div>
+        <div class="inline-block item">Test</div>
+    </div>
+</body>
+
+</html>
