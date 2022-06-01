@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/main.css">
+</head>
+<style>
+    div>a>p {
+        color: red
+    }
+
+    div+a+p {
+        color: green
+    }
+
+    .the1~.the2 {
+        color: orange
+    }
+
+    button:hover {
+        background-color: blue;
+        color: white
+    }
+
+    .input-test {
+        padding-left: 50px;
+        border-radius: 10px;
+    }
+
+    .input-test:hover {
+        border-radius: 5px;
+    }
+
+    .icon {
+        top: 0px;
+        left: 0px;
+        padding: 0px 10px;
+    }
+
+    div:empty {
+        background-color: green
+    }
+
+    div::first-letter {
+        text-transform: uppercase;
+        color: blue
+    }
+
+
+    .test:hover::before  {
+        content:'TEST';
+        background-color:blue;
+        display:inline-block;
+        width:100px;
+    }
+    .test:hover::after  {
+        content:'TEST';
+        background-color:blue;
+        display:inline-block;
+        width:100px;
+    }
+    .test2{
+        top:50px;
+        left:100px;
+    }
+    .test3{
+        top:20px;
+        background-color:blue!important;
+    }
+    .test3:hover ~ .test2{
+        width:100px;
+        background-color:blue!important;
+    }
+    
+</style>
+
+<body>
+    <div class="bg-red">
+        <p>Thẻ p 1</p>
+        <p>Thẻ p 2</p>
+        <a>
+            <p>Thẻ p thứ 3</p>
+            <div>
+                <p>Thẻ p thứ 4</p>
+            </div>
+            <p>Thẻ p thứ 5</p>
+        </a>
+        <p>Thẻ p 2</p>
+    </div>
+    <a>thẻ a thứ nhất</a>
+    <p>Đây là thẻ thứ 7</p>
+    <p>Đây là thẻ thứ 8</p>
+    <p class="the1">Thẻ p1</p>
+    <p>đá</p>
+    <p class="the2">Thẻ p1</p>
+    <p class="the2">Thẻ p1</p>
+    <p class="the2">Thẻ p2</p>
+    <!-- Presudo -->
+
+    <button>CLick here</button>
+    <div class="relative">
+        <input type="text" class="input-test" />
+        <div class="icon absolute">Nhập</div>
+    </div>
+    <div class="relative">
+        <input type="text" class="input-test" />
+        <div class="icon absolute">Nhập</div>
+    </div>
+    <div class="w-30px h-30px">
+        dsadadsads
+    </div>
+    <div class="test">
+        Nội dung thẻ div
+    </div>
+    <div class="test1 bg-red w-100px h-100px relative">
+        <div class="test3 w-30px h-30px absolute"></div>
+        <div class="test2 bg-green w-30px h-30px absolute"></div>
+    </div>
+</body>
+
+</html>
