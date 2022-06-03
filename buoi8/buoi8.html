@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/main.css">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .input-container {
+        padding-top: 30px;
+        margin: 0px auto;
+        width: fit-content;
+        height: 22px;
+        
+    }
+
+    .input-control {
+        height: 20px;
+        width:0px;
+        padding: 0px;
+        opacity: 0;
+        border: 0.5px solid black;
+        border-right: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        transition:width 0.5s ease-in-out
+    }
+
+    .input-button {
+        height: 100%;
+        width: 20px;
+        display: none;
+        background-color: #2D63E3;
+        vertical-align: bottom;
+        margin-left: -4px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .icon {
+        margin-top: 4px;
+        margin-left: 2px
+    }
+
+    .search-icon {
+        padding-top: 30px;
+        margin: 0px auto;
+        width: fit-content;
+        cursor: pointer
+    }
+
+    .search-icon:active {
+        display: none;
+    }
+
+    .search-icon:active+.input-container .input-control{
+        width:200px;
+        opacity:1
+    }
+    .search-icon:active+.input-container .input-button{
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="search-icon">
+            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="25px" height="25px">
+                <path
+                    d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z" />
+            </svg>
+        </div>
+        <div class="input-container">
+            <input type="text" class="input-control inline-block" />
+            <div class="input-button inline-block">
+                <svg class="icon" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="15px"
+                    height="15px">
+                    <path
+                        d="M 19 3 C 13.488281 3 9 7.488281 9 13 C 9 15.394531 9.839844 17.589844 11.25 19.3125 L 3.28125 27.28125 L 4.71875 28.71875 L 12.6875 20.75 C 14.410156 22.160156 16.605469 23 19 23 C 24.511719 23 29 18.511719 29 13 C 29 7.488281 24.511719 3 19 3 Z M 19 5 C 23.429688 5 27 8.570313 27 13 C 27 17.429688 23.429688 21 19 21 C 14.570313 21 11 17.429688 11 13 C 11 8.570313 14.570313 5 19 5 Z" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
