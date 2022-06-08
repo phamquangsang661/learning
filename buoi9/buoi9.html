@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style type="text/css">
+    body {
+        --bg-color-test: brown;
+        --bg-color-test1: blue;
+    }
+
+    .test {
+        --bg-color: red;
+        --borderWidth: 1px;
+        width: 300px;
+        height: 300px;
+        border: var(--borderWidth) solid red;
+        background-color: white
+    }
+
+    .test1 {}
+
+    .test:hover {
+        --bg-color: blue;
+        background-color: var(--bg-color);
+        border: calc(var(--borderWidth) * 10) solid red;
+    }
+
+    .test2 {
+        background-color: var(--bg-color-test1);
+        width: 300px;
+        height: 300px;
+    }
+
+    .container-grid {
+        display: grid;
+        width: 100vw;
+        background-color: white;
+        width: fit-content;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 200px;
+
+    }
+
+    .item {
+        width: 100%;
+        height: 100%;
+        background-color: red
+    }
+
+    .item-test {
+        width: 10px;
+        height: 10px;
+        background-color: black
+    }
+
+
+
+    .item-img {
+        object-fit: contain;
+        width: 300px;
+        height: 200px
+    }
+</style>
+
+<body>
+    <div class="test"></div>
+    <div class="test1">
+        <div class="test3">
+
+        </div>
+    </div>
+    <div class="test2"></div>
+    <!-- hoc grid -->
+    <div class="container-grid">
+
+        <img class="item-img"
+            src='https://images.pexels.com/photos/443416/pexels-photo-443416.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
+
+
+        <img class="item-img"
+            src='https://images.pexels.com/photos/443416/pexels-photo-443416.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
+
+
+        <img class="item-img"
+            src='https://images.pexels.com/photos/443416/pexels-photo-443416.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
+        <img class="item-img"
+            src='https://images.pexels.com/photos/443416/pexels-photo-443416.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
+
+    </div>
+</body>
+
+</html>
