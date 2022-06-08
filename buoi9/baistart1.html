@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: white
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px
+    }
+
+    .item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .img-3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .img-4 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .item-1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        background-color: red
+    }
+
+    .item-3 {
+        object-fit: cover;
+        background-color: red
+    }
+
+    .item-4 {
+        grid-column: 3 / span 4;
+    }
+</style>
+
+<body>
+    <div class="container-grid">
+        <div class="item item-1">
+            dasds
+        </div>
+        <div class="item item-2">
+            <img alt='' class="img-2"
+                src='https://images.pexels.com/photos/443416/pexels-photo-443416.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
+        </div>
+        <div class="item item-3">
+            <img alt='' class="img-3" src='https://images.pexels.com/photos/542411/pexels-photo-542411.png?auto=compress&cs=tinysrgb&h=750&w=1260
+                ' />
+        </div>
+        <div class="item item-4">
+            <img alt='' class="img-4" src='https://images.pexels.com/photos/614494/pexels-photo-614494.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
+                ' />
+        </div>
+    </div>
+</body>
+
+</html>
