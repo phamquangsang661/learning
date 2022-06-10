@@ -15,12 +15,12 @@
 
     .container {
         width: 500px;
-        height:100px;
+        height: 100px;
         background-color: red;
-        display:flex;
+        display: flex;
         flex-direction: row;
         justify-content: center;
-        gap:30px;
+        gap: 30px;
     }
 
     .payment {
@@ -28,6 +28,70 @@
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .container-img {
+        gap: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 500px;
+        background-color: #F0F0F0
+    }
+
+    .container-left {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+    }
+
+    .container-left-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    .container-right {
+        width: 100%;
+        gap:20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-right-top {
+        height: 50%
+    }
+
+    .container-right-bot {
+        height: 50%
+    }
+
+    .container-right-bot-img ,
+    .container-right-top-img-1,
+    .container-right-top-img-2{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container-right-top-1, 
+    .container-right-top-2{
+        width:100%;
+        height: 100%;
+    }
+
+    .container-right-top{
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+    }
+ 
 </style>
 
 <body>
@@ -46,6 +110,31 @@
             </div>
         </div>
 
+    </div>
+
+
+    <div class="container-img">
+        <div class="container-left">
+            <div class="container-left-content">Travel and see the world</div>
+        </div>
+        <div class="container-right">
+            <div class="container-right-top">
+                <div class="container-right-top-1">
+                    <img class="container-right-top-img-1"
+                        src='https://images.pexels.com/photos/443416/pexels-photo-443416.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+                        alt="" />
+                </div>
+                <div class="container-right-top-2">
+                    <img class="container-right-top-img-2"
+                        src='https://images.pexels.com/photos/542411/pexels-photo-542411.png?auto=compress&cs=tinysrgb&h=750&w=1260'
+                        alt="" />
+                </div>
+            </div>
+            <div class="container-right-bot">
+                <img alt="" class="container-right-bot-img"
+                    src='https://images.pexels.com/photos/614494/pexels-photo-614494.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260' />
+            </div>
+        </div>
     </div>
 </body>
 
