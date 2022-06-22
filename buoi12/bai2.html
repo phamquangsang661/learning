@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(54, 48, 48)
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        color: white;
+        margin: 0px auto;
+        width: fit-content;
+    }
+
+    .title {
+        font-size: 25px
+    }
+
+    .button {
+        background-color: gray;
+        border-radius: 2px;
+        width: fit-content;
+        padding: 10px;
+        border: 1px solid red
+    }
+
+
+    .text {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        .text {
+            display: block !important;
+        }
+
+        .button {
+            border: 1px solid yellow!important;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit..</div>
+        <div class="text"> Distinctio accusamus architecto molestias aperiam fugiat numquam ullam.</div>
+        <div class="button">MORE ABOUT BLABLA</div>
+    </div>
+
+</body>
+
+</html>
