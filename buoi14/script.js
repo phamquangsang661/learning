@@ -53,3 +53,17 @@ function sonFunction2() {
     //Thay đổi style thẻ P
     theP.style.color = "red"
 }
+
+function something() {
+    const input1 = document.getElementById("input1")
+    const theP = document.getElementById("theP")
+    theP.innerHTML = input1.value
+}
+
+
+
+function logObject() {
+    const firstName = document.getElementById('firstName').value
+    const lastName = document.getElementById('lastName').value
+    alert(`Họ và tên: ${firstName} ${lastName}`)
+}
