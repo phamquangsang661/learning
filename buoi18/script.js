@@ -72,4 +72,9 @@ console.log(tapHop.values())
 for (let giaTri of tapHop.values()) {
     console.log(giaTri)
 }
+const pattern = /([(\df)|\w|\d])+/
+console.log(pattern.test('3g'))
+console.log(pattern.exec('3f3g5f'))
+const chuoi = "Ten to la :<[Sang52345345]>".replace(/<\[[a-zA-z\d]+\]>/, 'Son')
+console.log(chuoi)
 
