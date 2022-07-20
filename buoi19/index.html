@@ -8,9 +8,28 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div style="border:1px solid black;color:green; padding:2px">Sáng phạm</div>
-    <script src="script.js"></script>
+<body
+    style="display:flex; flex-direction:column; gap:10px;justify-content:start;padding-top:100px;align-items:center;width:100vw;height:100vh ;">
+    <div>
+        <div style="padding-bottom:2px">Tên:</div>
+        <input id="inputName" type="text" />
+    </div>
+    <div>
+        <div style="padding-bottom:2px">Tuổi:</div>
+        <input id="inputAge" type="number" />
+    </div>
+    <div>
+        <div style="padding-bottom:2px">Địa chỉ:</div>
+        <input id="inputAddress" type="text" />
+    </div>
+    <div style="display: flex;flex-direction: row; gap:10px">
+        <button onClick="onClickAddStudent()">Thêm</button>
+        <button onClick="onClickShowStudent()">Xem</button>
+    </div>
+    <div id="student_list" style="display:flex; flex-direction: column;gap:10px">
+
+    </div>
+    <script src="script-2.js"></script>
 </body>
 
 </html>
