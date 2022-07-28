@@ -1,0 +1,164 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* background-image: url(https://c0.wallpaperflare.com/preview/572/961/266/sky-dark-light-clouds.jpg); */
+    background-image: url(https://st4.depositphotos.com/4231139/25032/i/600/depositphotos_250323120-stock-photo-gray-rainy-sky-and-summer.jpg);
+    /* background-image: url(https://raw.githubusercontent.com/Prince-Shivaram/Simple-Weather-App/master/bg.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    gap: 0px
+    ;
+    align-items: center;
+}
+.city_container{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+    gap: 0px;
+}
+
+.city_container_heading{
+    font-weight: bold;
+    font-size: 40pt;
+    font-family: 'Rajdhani', sans-serif;
+}
+.list_city{
+    width: 80%;
+    height: fit-content;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+    padding: 30px;
+}
+.city{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-family: 'Rajdhani', sans-serif;
+    box-sizing: border-box;
+    font-size: 20pt;
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+}
+button{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 40px;
+}
+.city:hover{
+    transition: 0.3s all ease-in-out;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(16, 71, 95);
+}
+.weather_container{
+    width: 65%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 15px;
+    font-family: 'Rajdhani', sans-serif;
+}
+.temperature_container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    justify-content: center;
+}
+.city_name{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 25pt;
+    
+}
+.icon{
+    width: 10%;
+    height: 10%;
+}
+.temperature{
+    font-size: 70pt;
+    font-weight: bold;
+}
+.celsius{
+    font-size: 40pt;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.weather_describe{
+    font-size: 20pt;
+}
+.daily_heading{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    font-size: 20pt;
+    padding-left: 54px;
+    box-sizing: border-box;
+}
+.daily_container{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-color: rgba(16, 71, 95, 0.4); 
+    color: white;
+}
+.daily_weather{
+    width: 25%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 25pt;
+    justify-content: center;
+    transition: 0.3s all ease-in-out;
+    gap: 15px
+    ;
+}
+.daily_weather:hover{
+    background-color: white;
+    transition: 0.3s all ease-in-out;
+    color: black;
+}
+.daily_weather:hover svg{
+    fill: black;
+    transition: 0.3s all ease-in-out;
+}
+svg{
+    transition: 0.3s all ease-in-out;
+    fill: #FFFFFF;
+    width: 70px;
+    height: 70px;
+}

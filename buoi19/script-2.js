@@ -7,6 +7,9 @@ const getInputById = (id) => {
     return document.getElementById(id)
 }
 
+const test = (a) => {
+    return a
+}
 //Để lấy giá trị theo id , hàm fc là hàm convert nếu có
 const getValueById = (id, fc = a => a) => {
     return fc(document.getElementById(id).value)
@@ -27,7 +30,7 @@ const onClickAddStudent = () => {
         alert("Không được để trống 1 trong 3 trường")
         return
     }
-    
+
     students.push({
         name,
         age,
@@ -41,6 +44,7 @@ const onClickShowStudent = () => {
     while (listStudentNode.firstChild) {
         listStudentNode.removeChild(listStudentNode.firstChild);
     }
+
     // Duyệt từng học sinh trong danh sách
     students.forEach(student => {
         const studentNode = document.createElement('div')
@@ -49,3 +53,11 @@ const onClickShowStudent = () => {
         listStudentNode.appendChild(studentNode)
     })
 }
+
+students.sort()
+const soSanhHocSinh = (a, b) => {
+    if (a.name > b.name)
+        return 1;
+    else return -1
+}
+students.sort(soSanhHocSinh)
