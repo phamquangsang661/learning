@@ -1,0 +1,24 @@
+body {
+  background-color: #17181C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  color: #8fc866;
+  border: 1px solid #8fc866;
+  padding: 10px;
+  width: 100px;
+  box-shadow: inset 0px 0px #8fc866, inset 0px 0px #8fc866;
+  transition: box-shadow 2s, color 1s;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container:hover {
+  box-shadow: inset 50px 0px #8fc866, inset -50px 0px #8fc866;
+  color: #17181C;
+}
+
+/*# sourceMappingURL=output.css.map */

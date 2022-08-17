@@ -1,0 +1,26 @@
+$buttonColor:#8fc866;
+
+$btnWidth:100px;
+
+body {
+    background-color: #17181C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    color: $buttonColor;
+    border: 1px solid $buttonColor;
+    padding: 10px;
+    width: $btnWidth;
+    box-shadow: inset 0px 0px $buttonColor, inset 0px 0px  $buttonColor;
+    transition: box-shadow 2s, color 1s;
+    box-sizing: border-box;
+    text-align: center;
+    &:hover {
+        box-shadow: inset calc($btnWidth / 2) 0px $buttonColor,inset  calc(-1* $btnWidth / 2) 0px $buttonColor;
+        color: #17181C
+    }
+}
