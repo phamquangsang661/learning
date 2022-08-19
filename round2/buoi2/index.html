@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    sang: '#D96E8B'
+                }
+            }
+        }
+    }
+</script>
+
+<body>
+
+    <div class="flex flex-row p-[50px] w-screen h-screen bg-[#EE4D2D]">
+        <div class="flex flex-col justify-center items-center pt-[30%] w-full">
+            <div class="text-[45px] text-white text-center">Shopee</div>
+            <div class="text-white text-[30px] text-center">Nền tảng thương mại điện tử yêu thích ở Đông Nam Á và Đài
+                Loan</div>
+        </div>
+        <div class="p-[50px] w-full">
+            <div class="bg-white rounded-[10px] shadow-md w-full h-full p-5 
+            flex flex-col  ">
+                <div class="text-[25px] pb-12">Đăng nhập</div>
+                <div class="flex flex-col w-full gap-6 pb-12">
+                    <input class="border border-gray-400 p-2 focus:!rounded-[0px]" />
+                    <input class="border border-gray-400 p-2 focus:!rounded-[0px]" />
+                </div>
+                <div class="bg-[#EE4D2D] text-white text-center w-full py-3 uppercase mb-3">Đăng nhập</div>
+                <div class="flex flex-row justify-between text-[#52B6E9] text-[15px]">
+                    <div>
+                        Quên mật khẩu
+                    </div>
+                    <div>
+                        Đăng nhập với SMS
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="h-[1px] w-full bg-gray-400"></div>
+                    <div class="text-gray-400 px-5 uppercase">Hoặc</div>
+                    <div class="h-[1px] w-full bg-gray-400"></div>
+                </div>
+                <div class="flex flex-row gap-5 w-full pt-6">
+                    <div class="rounded-[10px] border border-gray-400 p-3 w-full text-center">Facebook</div>
+                    <div class="rounded-[10px] border border-gray-400 p-3 w-full  text-center">Google</div>
+                    <div class="rounded-[10px] border border-gray-400 p-3 w-full  text-center">Apple</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

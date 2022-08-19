@@ -7,17 +7,17 @@ body {
 }
 
 .container {
-  color: #8fc866;
-  border: 1px solid #8fc866;
+  color: blue;
+  border: 1px solid blue;
   padding: 10px;
   width: 100px;
-  box-shadow: inset 0px 0px #8fc866, inset 0px 0px #8fc866;
+  box-shadow: inset 0px 0px blue, inset 0px 0px blue;
   transition: box-shadow 2s, color 1s;
   box-sizing: border-box;
   text-align: center;
 }
 .container:hover {
-  box-shadow: inset 50px 0px #8fc866, inset -50px 0px #8fc866;
+  box-shadow: inset 50px 0px blue, inset -50px 0px blue;
   color: #17181C;
 }
 

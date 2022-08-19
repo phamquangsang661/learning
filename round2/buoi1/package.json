@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "sass ./test.scss ./output.css",
+    "start": "sass --watch ./test.scss ./output.css",
     "test": "node -v"
   },
   "author": "",
