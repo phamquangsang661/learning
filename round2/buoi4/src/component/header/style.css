@@ -1,0 +1,28 @@
+.header {
+    width: 100%;
+    background-color: #20232a;
+    padding: 5px 20px;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    font-weight: bold;
+    gap:10px;
+    color: #61dafb;
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+}
+
+.header-center {
+}
+.header-right{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    padding-right:20px
+}
