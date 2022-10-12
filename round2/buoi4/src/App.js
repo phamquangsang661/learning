@@ -13,7 +13,7 @@ const App = () => {
       alignItems: 'center',
 
     }}>
-      <Header />
+      <Header test={"ĐÂY LÀ PROP TEST"} />
     </div>
   );
 }

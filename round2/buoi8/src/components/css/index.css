@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.focused{
+    color:white;
+
+}
+
+.focused::after{
+
+    position:absolute;
+}
+
+.chat-flex{
+    flex: 0 0 350px;
+}

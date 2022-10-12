@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 function App() {
   const [step, setStep] = useState(1)
@@ -19,10 +19,21 @@ function App() {
       return "0"
     return parseFloat(value).toString()
   })
-
+  const [memory, setMemory] = useState([])
 
 
   const [symbol, setSymbol] = useState('')
+
+  const updateMemory = (fn, sn, sym, res) => {
+    const temp = memory
+    temp.push({
+      firstNumber: fn,
+      secondNumber: sn,
+      symbol: sym,
+      result: res
+    })
+    setMemory(temp)
+  }
 
   const convertNumber = (value) => {
     const isUseDot = value?.[value.length - 1] === '.' || false
@@ -50,6 +61,7 @@ function App() {
       case "PLUS": {
         let resultTemp = first + second
         resultTemp = convert(resultTemp)
+        updateMemory(first, second, symbol, resultTemp)
         setFirstNumber(resultTemp)
         setResult(resultTemp)
         break;
@@ -57,6 +69,7 @@ function App() {
       case "MIN": {
         let resultTemp = first - second
         resultTemp = convert(resultTemp)
+        updateMemory(first, second, symbol, resultTemp)
         setFirstNumber(resultTemp)
         setResult(resultTemp)
         break;
@@ -64,6 +77,7 @@ function App() {
       case "MUP": {
         let resultTemp = first * second
         resultTemp = convert(resultTemp)
+        updateMemory(first, second, symbol, resultTemp)
         setFirstNumber(resultTemp)
         setResult(resultTemp)
         break;
@@ -71,6 +85,7 @@ function App() {
       case "DIV": {
         let resultTemp = first / second
         resultTemp = convert(resultTemp)
+        updateMemory(first, second, symbol, resultTemp)
         setFirstNumber(resultTemp)
         setResult(resultTemp)
         break;
@@ -197,55 +212,129 @@ function App() {
 
   const number = ['7', '8', '9', '4', '5', '6', '1', '2', '3']
 
+  const convertSymbol = (sym) => {
+    const symMem = {
+      "PLUS": "+",
+      "MUP": "*",
+      "DIV": '/',
+      "MIN": '-'
+    }
+    return symMem[sym]
+  }
 
+  const onClickMemory = (mem) => () => {
+    setFirstNumber(mem.result)
+    setResult(mem.result)
+    setStep(1)
+  }
+
+  const onClickDeleteMemory = () => {
+    setMemory([])
+  }
+  useEffect(() => {
+    console.log("Mouted")
+    return () => {
+      console.log("UNMOUNT")
+    }
+  }, [])
+  console.log("RENDER")
+
+  const [isFirst, setIsFirst] = useState(true)
+  const numRef = useRef(0)
+  // useEffect(() => {
+  //   // Call when componentWillMount and componentWillUpdate
+  //   console.log("USE EFFECT 2 IS CALLING")
+  //   console.log(isFirst)
+
+  //   if (isFirst) {
+  //     setIsFirst(false)
+  //     setResult(12345)
+
+  //     // LOGIC HERE
+  //     return () => {
+  //       console.log("UNMOUNT useEffect 2")
+  //     }
+  //   } else {
+  //     console.log("Mouted useEffect2")
+  //   }
+
+  //   return () => {
+  //     console.log("UNMOUNT useEffect 2")
+  //   }
+  // }, [isFirst, result])
+  // console.log(numRef.current)
+  // useEffect(() => {
+  //   console.log("Mouted 3")
+  //   return () => {
+  //     console.log("UNMOUNT 3")
+  //   }
+  // }, [])
   return (
-    <div className="flex flex-col h-screen text-[50px] ">
 
-      {3 > 2 && <div className="bg-[#858694] h-fit py-3 leading-[100px] text-white text-[100px] text-right px-5  w-full"
-      >{result}</div>}
+    <div className="flex flex-row w-full">
+      {(() => {
+        console.log("RENDER UI")
+      })(
+
+      )}
+      <div className="flex flex-col h-screen text-[50px] w-full">
+
+        {<div className="bg-[#858694] h-fit py-3 leading-[100px] text-white text-[100px] text-right px-5  w-full"
+        >{result}</div>}
 
 
-      <div className="flex flex-row h-full">
-        <div className="w-3/4 bg-[#E0E0E0] flex flex-col h-full">
-          <div className="w-full grid grid-cols-3 h-4/5">
-            <div
-              className="h-full w-full flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
-              onClick={handleClick('AC')}
-            >AC</div>
-            <div
-              className="h-full w-full flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
-              onClick={handleClick('POS')}
-            >+/-</div>
-            <div className="h-full w-full flex justify-center items-center border-b  border-[#858694] active:opacity-30"
-              onClick={handleClick('PEC')}
-            >%</div>
+        <div className="flex flex-row h-full">
+          <div className="w-3/4 bg-[#E0E0E0] flex flex-col h-full">
+            <div className="w-full grid grid-cols-3 h-4/5">
+              <div
+                className="h-full w-full flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
+                onClick={handleClick('AC')}
+              >AC</div>
+              <div
+                className="h-full w-full flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
+                onClick={handleClick('POS')}
+              >+/-</div>
+              <div className="h-full w-full flex justify-center items-center border-b  border-[#858694] active:opacity-30"
+                onClick={handleClick('PEC')}
+              >%</div>
 
-            {
-              number.map(value => (
-                <div key={value} className="h-full w-full flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
-                  onClick={handleClick(value)}>{value}</div>
-              ))
-            }
+              {
+                number.map(value => (
+                  <div key={value} className="h-full w-full flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
+                    onClick={handleClick(value)}>{value}</div>
+                ))
+              }
 
+            </div>
+            <div className="flex flex-row h-1/5">
+              <div className="w-2/3 h-full  flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
+                onClick={handleClick('0')}>0</div>
+              <div className="w-1/3 h-full  flex justify-center items-center border-b border-[#858694] active:opacity-30"
+                onClick={handleClick('DOT')}>.</div>
+            </div>
           </div>
-          <div className="flex flex-row h-1/5">
-            <div className="w-2/3 h-full  flex justify-center items-center border-b border-r border-[#858694] active:opacity-30"
-              onClick={handleClick('0')}>0</div>
-            <div className="w-1/3 h-full  flex justify-center items-center border-b border-[#858694] active:opacity-30"
-              onClick={handleClick('DOT')}>.</div>
+          <div className="w-1/4 flex flex-col bg-[#F5923E] text-white">
+            <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
+              onClick={handleClick('DIV')}>÷</div>
+            <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
+              onClick={handleClick('MUP')}>x</div>
+            <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
+              onClick={handleClick('MIN')}>-</div>
+            <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
+              onClick={handleClick('PLUS')}>+</div>
+            <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
+              onClick={handleClick('EUQ')}>=</div>
           </div>
         </div>
-        <div className="w-1/4 flex flex-col bg-[#F5923E] text-white">
-          <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
-            onClick={handleClick('DIV')}>÷</div>
-          <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
-            onClick={handleClick('MUP')}>x</div>
-          <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
-            onClick={handleClick('MIN')}>-</div>
-          <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
-            onClick={handleClick('PLUS')}>+</div>
-          <div className="h-full w-full flex justify-center items-center border-b border-[#858694] active:opacity-30"
-            onClick={handleClick('EUQ')}>=</div>
+      </div>
+      <div className="flex flex-col w-[20%] gap-2  relative">
+        {memory.map(mem => (
+          <div onClick={onClickMemory(mem)} className="p-3 hover:bg-[#858694] cursor-pointer active:bg-[#F5923E]">
+            {mem.firstNumber}{' '}{convertSymbol(mem.symbol)}{' '}{mem.secondNumber}{' = '}{mem.result}
+          </div>
+        ))}
+        <div onClick={onClickDeleteMemory} className="absolute bottom-0 right-0 border border-black p-1 cursor-pointer">
+          Xóa
         </div>
       </div>
     </div>

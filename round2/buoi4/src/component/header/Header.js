@@ -1,14 +1,15 @@
 import './style.css'
 import HeaderButton from './HeaderButton'
-const Header = () => {
+const Header = (props) => {
+    const { test } = props
     return (
         <div className="header">
             <div className="header-left">
                 <img width="30" src="/assets/logo-react.png"></img>
-                <div>React</div>
+                <div>{test}</div>
             </div>
             <div className="header-center">
-                <HeaderButton>Docs</HeaderButton>
+                <HeaderButton >Docs</HeaderButton>
                 <HeaderButton></HeaderButton>
                 <HeaderButton></HeaderButton>
                 <HeaderButton></HeaderButton>
