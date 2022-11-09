@@ -2,6 +2,8 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
+import axios from 'axios'
+
 export default function Login() {
 
     const formik = useFormik({
@@ -9,9 +11,14 @@ export default function Login() {
             username: "",
             password: ""
         },
-        onSubmit: values => {
+        onSubmit: async (values) => {
             // CALLING API LOGIN
-            console.log(values)
+            const res = await axios
+                .post('http://localhost:1337/api/auth/local', {
+                    identifier: values.username,
+                    password: values.password,
+                })
+            console.log(res.data.jwt)
         },
     });
     return <div className="flex justify-center items-center w-full h-full">
