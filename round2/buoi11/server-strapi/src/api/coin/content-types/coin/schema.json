@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coins",
+  "info": {
+    "singularName": "coin",
+    "pluralName": "coins",
+    "displayName": "coin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
