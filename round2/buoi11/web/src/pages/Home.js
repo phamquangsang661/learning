@@ -25,8 +25,8 @@ export default function Home() {
 
         })
     }, [])
-    return <div className="w-full pt-10">
-        <div className="flex flex-row gap-3">
+    return <div className="w-full pt-10 bg-[#14141F]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 p-10">
             {products.map(value => (
                 <ProductCard data={value} />
             ))}

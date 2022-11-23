@@ -37,6 +37,9 @@ export default function Layout({ children }) {
                     className="!bg-black hover:!bg-white hover:!text-black !text-white !border-white rounded-md">Login</Button>}
                 {isAuth && <div className="flex flex-row gap-3">
                     <Button variant="outlined"
+                        href="/sell"
+                        className="!bg-black hover:!bg-white hover:!text-black !text-white !border-white rounded-md">Sell</Button>
+                    <Button variant="outlined"
                         href="/profile"
                         className="!bg-black hover:!bg-white hover:!text-black !text-white !border-white rounded-md">Profile</Button>
 

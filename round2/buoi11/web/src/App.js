@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Layout from './components/Layout'
+import Sell from './pages/Sell'
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/sell" element={<Sell />} />
         </Routes>
       </Router>
     </Layout>
