@@ -76,6 +76,11 @@
     },
     "imageUrl": {
       "type": "text"
+    },
+    "product_likes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
     }
   }
 }
