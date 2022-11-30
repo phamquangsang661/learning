@@ -1,12 +1,42 @@
+import axios from "axios"
+import { useProductLike } from "../../lib/hooks/use-product-like"
+import { useAuth } from "../../lib/hooks/use-auth"
+import Cookies from 'js-cookie'
+
 const ProductCard = ({ data }) => {
-    const { like, name, coin, owner, price, imageUrl } = data
+    const { name, coin, owner, price, imageUrl, id } = data
+    const { isAuth } = useAuth()
+    const { likeInfo, setRefresh } = useProductLike({ id })
+    const onClickLike = () => {
+        const session = Cookies.get("session")
+
+        if (!isAuth) {
+            alert("you must to login to like product")
+            return;
+        }
+
+        axios.post(`http://localhost:1337/api/products/${id}/like`, {
+        }, {
+            headers: {
+                authorization: "Bearer " + session
+            }
+        }).then(res => {
+            setRefresh(Math.random())
+        }).catch(err => {
+            alert("you must to login to like product")
+        })
+    }
     return <div className="bg-[#343444] rounded-md p-5
      flex flex-col w-fit hover:translate-y-[-8px] gap-2 transition-all">
         <div className="relative rounded-md overflow-hidden w-full h-[300px]">
-            <div className="absolute top-2 right-2 
-            rounded-md bg-black text-white text-[10px] p-3 py-1 z-[10]">
-                {like}
-            </div>
+            {likeInfo?.isLiked && <button onClick={onClickLike} className="absolute top-2 right-2 
+            rounded-md  text-[10px] p-3 py-1 z-[10] bg-black text-white ">
+                {likeInfo?.likes || 0}
+            </button>}
+            {!likeInfo?.isLiked && <button onClick={onClickLike} className="absolute top-2 right-2 font-bold
+            rounded-md  bg-white border-black border-[2px] text-black  text-[10px] p-3 py-1 z-[10]">
+                {likeInfo?.likes || 0}
+            </button>}
             <img alt="" src={imageUrl} className="w-[300px] h-[300px] object-cover transition-all hover:scale-[1.2]" />
         </div>
         <div className="flex flex-row justify-between items-center">

@@ -28,8 +28,6 @@ export default function Sell() {
             coin: -1,
         },
         onSubmit: async (values) => {
-
-
             setMessage("")
             setIsError(false)
             try {
