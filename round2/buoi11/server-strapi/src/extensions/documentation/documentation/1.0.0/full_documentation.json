@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-11-30T12:39:01.823Z"
+    "x-generation-date": "2022-12-14T13:06:57.374Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1443,6 +1443,17 @@
               },
               "imageUrl": {
                 "type": "string"
+              },
+              "soldAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isSelling": {
+                "type": "boolean"
+              },
+              "sellEndDate": {
+                "type": "string",
+                "format": "date-time"
               }
             }
           }
@@ -2138,6 +2149,17 @@
                                         "imageUrl": {
                                           "type": "string"
                                         },
+                                        "soldAt": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
+                                        "isSelling": {
+                                          "type": "boolean"
+                                        },
+                                        "sellEndDate": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -2268,6 +2290,17 @@
               },
               "imageUrl": {
                 "type": "string"
+              },
+              "soldAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isSelling": {
+                "type": "boolean"
+              },
+              "sellEndDate": {
+                "type": "string",
+                "format": "date-time"
               },
               "createdAt": {
                 "type": "string",
@@ -3009,6 +3042,17 @@
                                         "imageUrl": {
                                           "type": "string"
                                         },
+                                        "soldAt": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
+                                        "isSelling": {
+                                          "type": "boolean"
+                                        },
+                                        "sellEndDate": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -3139,6 +3183,17 @@
               },
               "imageUrl": {
                 "type": "string"
+              },
+              "soldAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isSelling": {
+                "type": "boolean"
+              },
+              "sellEndDate": {
+                "type": "string",
+                "format": "date-time"
               },
               "createdAt": {
                 "type": "string",
@@ -3913,6 +3968,17 @@
                                         "imageUrl": {
                                           "type": "string"
                                         },
+                                        "soldAt": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
+                                        "isSelling": {
+                                          "type": "boolean"
+                                        },
+                                        "sellEndDate": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -4043,6 +4109,17 @@
               },
               "imageUrl": {
                 "type": "string"
+              },
+              "soldAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isSelling": {
+                "type": "boolean"
+              },
+              "sellEndDate": {
+                "type": "string",
+                "format": "date-time"
               },
               "createdAt": {
                 "type": "string",
@@ -4784,6 +4861,17 @@
                                         "imageUrl": {
                                           "type": "string"
                                         },
+                                        "soldAt": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
+                                        "isSelling": {
+                                          "type": "boolean"
+                                        },
+                                        "sellEndDate": {
+                                          "type": "string",
+                                          "format": "date-time"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -4914,6 +5002,17 @@
               },
               "imageUrl": {
                 "type": "string"
+              },
+              "soldAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isSelling": {
+                "type": "boolean"
+              },
+              "sellEndDate": {
+                "type": "string",
+                "format": "date-time"
               },
               "createdAt": {
                 "type": "string",
@@ -12349,6 +12448,17 @@
                                                       "imageUrl": {
                                                         "type": "string"
                                                       },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -13188,6 +13298,17 @@
                                                       },
                                                       "imageUrl": {
                                                         "type": "string"
+                                                      },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -14062,6 +14183,17 @@
                                                       "imageUrl": {
                                                         "type": "string"
                                                       },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -14901,6 +15033,17 @@
                                                       },
                                                       "imageUrl": {
                                                         "type": "string"
+                                                      },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -15764,6 +15907,17 @@
                                                                     },
                                                                     "imageUrl": {
                                                                       "type": "string"
+                                                                    },
+                                                                    "soldAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "isSelling": {
+                                                                      "type": "boolean"
+                                                                    },
+                                                                    "sellEndDate": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",
@@ -16633,6 +16787,17 @@
                                                                     },
                                                                     "imageUrl": {
                                                                       "type": "string"
+                                                                    },
+                                                                    "soldAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "isSelling": {
+                                                                      "type": "boolean"
+                                                                    },
+                                                                    "sellEndDate": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",
@@ -17536,6 +17701,17 @@
                                                                     "imageUrl": {
                                                                       "type": "string"
                                                                     },
+                                                                    "soldAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "isSelling": {
+                                                                      "type": "boolean"
+                                                                    },
+                                                                    "sellEndDate": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
                                                                     "createdAt": {
                                                                       "type": "string",
                                                                       "format": "date-time"
@@ -18404,6 +18580,17 @@
                                                                     },
                                                                     "imageUrl": {
                                                                       "type": "string"
+                                                                    },
+                                                                    "soldAt": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    "isSelling": {
+                                                                      "type": "boolean"
+                                                                    },
+                                                                    "sellEndDate": {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
                                                                     },
                                                                     "createdAt": {
                                                                       "type": "string",
@@ -19443,6 +19630,17 @@
                                                       "imageUrl": {
                                                         "type": "string"
                                                       },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -20364,6 +20562,17 @@
                                                       },
                                                       "imageUrl": {
                                                         "type": "string"
+                                                      },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -21320,6 +21529,17 @@
                                                       "imageUrl": {
                                                         "type": "string"
                                                       },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -22242,6 +22462,17 @@
                                                       "imageUrl": {
                                                         "type": "string"
                                                       },
+                                                      "soldAt": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
+                                                      "isSelling": {
+                                                        "type": "boolean"
+                                                      },
+                                                      "sellEndDate": {
+                                                        "type": "string",
+                                                        "format": "date-time"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -22762,7 +22993,7 @@
           {
             "name": "pagination[withCount]",
             "in": "query",
-            "description": "Retun page/pageSize (default: true)",
+            "description": "Return page/pageSize (default: true)",
             "deprecated": false,
             "required": false,
             "schema": {
@@ -22839,6 +23070,16 @@
               "type": "object"
             },
             "style": "deepObject"
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "description": "Locale to apply",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "operationId": "get/coins"
@@ -23257,7 +23498,7 @@
           {
             "name": "pagination[withCount]",
             "in": "query",
-            "description": "Retun page/pageSize (default: true)",
+            "description": "Return page/pageSize (default: true)",
             "deprecated": false,
             "required": false,
             "schema": {
@@ -23334,6 +23575,16 @@
               "type": "object"
             },
             "style": "deepObject"
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "description": "Locale to apply",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "operationId": "get/products"
@@ -23752,7 +24003,7 @@
           {
             "name": "pagination[withCount]",
             "in": "query",
-            "description": "Retun page/pageSize (default: true)",
+            "description": "Return page/pageSize (default: true)",
             "deprecated": false,
             "required": false,
             "schema": {
@@ -23829,6 +24080,16 @@
               "type": "object"
             },
             "style": "deepObject"
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "description": "Locale to apply",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "operationId": "get/wallets"
@@ -24247,7 +24508,7 @@
           {
             "name": "pagination[withCount]",
             "in": "query",
-            "description": "Retun page/pageSize (default: true)",
+            "description": "Return page/pageSize (default: true)",
             "deprecated": false,
             "required": false,
             "schema": {
@@ -24324,6 +24585,16 @@
               "type": "object"
             },
             "style": "deepObject"
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "description": "Locale to apply",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "operationId": "get/upload/files"

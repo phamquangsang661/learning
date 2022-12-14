@@ -2,11 +2,14 @@ import axios from "axios"
 import { useProductLike } from "../../lib/hooks/use-product-like"
 import { useAuth } from "../../lib/hooks/use-auth"
 import Cookies from 'js-cookie'
+import { useEffect, useState } from "react"
+import dayjs from 'dayjs'
 
 const ProductCard = ({ data }) => {
-    const { name, coin, owner, price, imageUrl, id } = data
+    const { name, coin, owner, price, imageUrl, id, sellEndDate } = data
     const { isAuth } = useAuth()
     const { likeInfo, setRefresh } = useProductLike({ id })
+    console.log(sellEndDate)
     const onClickLike = () => {
         const session = Cookies.get("session")
 
@@ -26,6 +29,21 @@ const ProductCard = ({ data }) => {
             alert("you must to login to like product")
         })
     }
+    const [timeCount, setTimeCount] = useState(dayjs(sellEndDate).subtract(dayjs()).format("HH:mm:ss"))
+    
+    useEffect(() => {
+        let timeOutCount = null;
+        if (sellEndDate) {
+            timeOutCount = setInterval(() => {
+                console.log("RUN TIME OUT")
+                setTimeCount(dayjs(sellEndDate).subtract(dayjs()).format("HH:mm:ss"))
+            }, 1000)
+        }
+        return () => {
+            if (timeOutCount)
+                clearInterval(timeOutCount)
+        }
+    }, [sellEndDate])
     return <div className="bg-[#343444] rounded-md p-5
      flex flex-col w-fit hover:translate-y-[-8px] gap-2 transition-all">
         <div className="relative rounded-md overflow-hidden w-full h-[300px]">
@@ -37,7 +55,12 @@ const ProductCard = ({ data }) => {
             rounded-md  bg-white border-black border-[2px] text-black  text-[10px] p-3 py-1 z-[10]">
                 {likeInfo?.likes || 0}
             </button>}
-            <img alt="" src={imageUrl} className="w-[300px] h-[300px] object-cover transition-all hover:scale-[1.2]" />
+            <img alt="" src={imageUrl} className="relative w-[300px] h-[300px] object-cover transition-all hover:scale-[1.2]" />
+
+
+            <div className="absolute z-50 bottom-0 left-0 w-full h-fit py-2 flex justify-center items-center">
+                <div className="bg-[#343444] text-white font-bold rounded-md px-4 py-1">{timeCount}</div>
+            </div>
         </div>
         <div className="flex flex-row justify-between items-center">
             <p className="text-white text-[25px]">{name}</p>

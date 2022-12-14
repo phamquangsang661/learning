@@ -36,6 +36,17 @@
     },
     "imageUrl": {
       "type": "text"
+    },
+    "soldAt": {
+      "type": "datetime"
+    },
+    "isSelling": {
+      "type": "boolean",
+      "default": true
+    },
+    "sellEndDate": {
+      "type": "datetime",
+      "default": "2022-12-19T17:00:00.000Z"
     }
   }
 }
